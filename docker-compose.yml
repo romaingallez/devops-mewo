@@ -42,6 +42,15 @@ services:
       - postgresql_data:/var/lib/postgresql/data
       - ./tools/sonarqube/init-sonar-db.sql:/docker-entrypoint-initdb.d/init-sonar-db.sql
 
+  docs:
+    build:
+      context: .
+    volumes:
+      - ./docs:/docs/docs:ro
+      - ./README.md:/docs/README.md
+    ports:
+      - "8000:8000"
+
 volumes:
   jenkins_data:
   sonarqube_data:

@@ -1,0 +1,16 @@
+site_name: Documentation
+
+repo_name: NiniMewo/devops-mewo
+repo_url: Ahttps://github.com/NiniMewo/devops-mewo
+
+theme:
+  name: 'material'
+  custom_dir: 'docs/theme'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - meta
