@@ -47,7 +47,6 @@ services:
       context: .
     volumes:
       - ./docs:/docs/docs:ro
-      - ./README.md:/docs/README.md
     ports:
       - "8000:8000"
 
