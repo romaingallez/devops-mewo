@@ -17,6 +17,7 @@ services:
       - db 
 
   db:
+
     image: postgres:latest
     restart: always
     ports:
