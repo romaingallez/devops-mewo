@@ -1,11 +1,17 @@
 
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.12.1-alpine3.19'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
+    }
     stages {
         stage('Initialize') {
             steps {
                 script {
                     echo 'Starting the Pipeline...'
+                    sh 'python --version'
                 }
             }
         }
